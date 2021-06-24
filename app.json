@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "nitoxi",
+    "name": "Nitoxi",
     "slug": "nitoxi",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -17,13 +17,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan QR codes to verify user input."
+      },
+      "bundleIdentifier": "com.bassamahmed.nitoxi"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+      "permissions": [
+        "CAMERA",
+        "VIBRATE"
+      ],
+      "package": "com.nitoximedtech.nitoxi",
+      "icon": "./assets/icon.png",
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
